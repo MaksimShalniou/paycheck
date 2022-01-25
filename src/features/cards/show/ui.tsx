@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 import { Card } from '../../../entities/card';
-import { fetchData } from '../../../shared/api/request'
+import { fetchData } from '../../../shared/api/request';
+
+const API_URL = 'https://rickandmortyapi.com/api/character';
 
 const useStyles = makeStyles({
     container: {
@@ -13,15 +15,12 @@ const useStyles = makeStyles({
     }
 })
 
-export const ShowCards = observer(({ cards, addCard }: any) => {
+export const ShowCards = inject("cardsStore")(observer(({ cardsStore }: any) => {
     const classes = useStyles();
 
     useEffect(() => {
-        fetchData('https://rickandmortyapi.com/api/character')?.then((res: any) => res.results.forEach((el: any) => {
-            addCard(el);
-        }));
+        fetchData(API_URL)?.then(({ results }: never) => cardsStore.addCard(results));
+    }, [cardsStore, cardsStore.addCard]);
 
-    }, [addCard]);
-
-    return <div className={classes.container}>{cards.map((card: any) => <Card card={card} />)}</div>
-})
+    return <div className={classes.container}>{cardsStore.cards.map((card: any) => <Card card={card} key={`${card?.id} card`} />)}</div>
+}))

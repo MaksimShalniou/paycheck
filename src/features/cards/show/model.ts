@@ -1,6 +1,6 @@
 import { makeAutoObservable } from 'mobx';
 
-interface card {
+export interface CardParams {
   id: number;
   created: string;
   episode: Array<string>;
@@ -15,20 +15,16 @@ interface card {
   url: string;
 }
 
-export interface cardsInterface {
-  cards: Array<card>;
+export interface ShowCardsParams {
+  cards: Array<CardParams>;
+  addCard: (cards: Array<CardParams>) => void;
 }
 
-export class CardsStore implements cardsInterface {
-  cards = [];
+export class CardsStore implements ShowCardsParams {
+  cards: Array<CardParams> = [];
 
-  addCard = (card: card) => {
-    this.cards.push(card as never)
-
-  }
-
-  clearCardsData = () => {
-    this.cards = []
+  addCard = (cards: Array<CardParams>) => {
+    this.cards = cards;
   }
 
   constructor() {
