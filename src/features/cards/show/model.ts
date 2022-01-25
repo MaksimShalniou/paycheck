@@ -1,4 +1,5 @@
 import { makeAutoObservable } from 'mobx';
+import { fetchCards } from './api';
 
 export interface CardParams {
   id: number;
@@ -26,6 +27,8 @@ export class CardsStore implements ShowCardsParams {
   addCard = (cards: Array<CardParams>) => {
     this.cards = cards;
   }
+
+  getCards = () => fetchCards(this.addCard);
 
   constructor() {
     makeAutoObservable(this);
