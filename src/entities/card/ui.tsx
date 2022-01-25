@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Typography  } from '@material-ui/core';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     container: {
         width: 600,
         height: 220,
@@ -34,10 +35,7 @@ const useStyles = makeStyles({
         flex: '3 1 0%',
         padding: '0.75rem',
     },
-    text: {
-        margin: 0,
-    }
-});
+}));
 
 export const Card = ({ card }: any) => {
     const classes = useStyles();
@@ -47,12 +45,12 @@ export const Card = ({ card }: any) => {
             <img src={card.image} alt='' className={classes.img} />
         </div>
         <div className={classes.content}>
-            <p className={classes.text} >{card.name}</p>
-            <p className={classes.text} >{`${card.status} - ${card.gender}`}</p>
-            <p className={classes.text} >Last known location:</p>
-            <p className={classes.text} >{card.location.name}</p>
-            <p className={classes.text} >First seen in:</p>
-            <p className={classes.text} >{card.origin.name}</p>
+            <Typography variant='body1' >{card.name}</Typography >
+            <Typography variant='body1' >{`${card.status} - ${card.gender}`}</Typography>
+            <Typography variant='body1' >Last known location:</Typography>
+            <Typography variant='body1' >{card.location.name}</Typography>
+            <Typography variant='body1' >First seen in:</Typography>
+            <Typography variant='body1' >{card.origin.name}</Typography>
         </div>
     </div>
 }

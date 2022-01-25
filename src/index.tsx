@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from '@material-ui/styles';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Routes } from './pages/routes';
+import { getCustomTheme } from './theme';
 
 ReactDOM.render(
-    <Routes />,
+  <ThemeProvider theme={getCustomTheme()}>
+    <Routes />
+    </ThemeProvider>,
   document.getElementById('root')
 );
 
