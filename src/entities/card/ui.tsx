@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 export const Card = ({ card }: any) => {
     const classes = useStyles();
 
-    return <div key={`${card.id} card`} className={classes.container}>
+    return <div className={classes.container}>
         <div className={classes.wrapper}>
             <img src={card.image} alt='' className={classes.img} />
         </div>

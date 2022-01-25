@@ -5,8 +5,10 @@ import {
   Routes as Switch,
   Route,
 } from "react-router-dom";
+import { enableLogging } from 'mobx-logger';
 
 export const Routes = () => {
+  enableLogging();
 
   return <Router>
     <Switch>

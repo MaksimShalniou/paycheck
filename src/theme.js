@@ -1,7 +1,7 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 export const getCustomTheme = (primary, secondary) => {
-    const theme = responsiveFontSizes(createMuiTheme({
+    const theme = responsiveFontSizes(createTheme({
         spacing: 4,
         palette: {
             primary: {
