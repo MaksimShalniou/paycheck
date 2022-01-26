@@ -1,9 +1,8 @@
 import React, { ReactElement } from "react";
 import { Provider } from "mobx-react";
-import { Character } from "./ui";
-import { CharacterInfo } from "./model";
+import { Character, CharacterInfoStore } from "../../features/character";
 
-const characterInfoStore = new CharacterInfo()
+const characterInfoStore = new CharacterInfoStore()
 
 export const CharacterPage = (): ReactElement => {
   return (

@@ -1,5 +1,3 @@
-import { makeAutoObservable } from 'mobx';
-
 export interface InfoParams {
   id: number;
   created: string;
@@ -16,18 +14,11 @@ export interface InfoParams {
 }
 
 export interface CharacterInfoParams {
-  info: InfoParams;
+  info: InfoParams | object;
   addInfo: (info: InfoParams) => void;
+  getInfo: (id: string) => void
 }
 
-export class CharacterInfo implements CharacterInfoParams {
-  info: any = null;
-
-  addInfo = (info: any) => {
-    this.info = info;
-  }
-
-  constructor() {
-    makeAutoObservable(this);
-  }
+export interface CharacterProps {
+  characterInfoStore?: CharacterInfoParams
 }
