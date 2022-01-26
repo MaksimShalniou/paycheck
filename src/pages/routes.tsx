@@ -6,6 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import { enableLogging } from 'mobx-logger';
+import { CharacterPage } from './character';
 
 export const Routes = () => {
   enableLogging();
@@ -13,6 +14,7 @@ export const Routes = () => {
   return <Router>
     <Switch>
       <Route path="/" element={<HomePage />} />
+      <Route path="/character/:idOfPerson" element={<CharacterPage />} />
     </Switch>
   </Router>
 }
