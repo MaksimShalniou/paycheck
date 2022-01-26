@@ -14,3 +14,9 @@ export const fetchData = (url: string, method: string = HTTP_METHODS.GET, body?:
     }
     return response.then(({ data }) => data).catch(() => alert('Error'));
 };
+
+export const fetchCharacterData = (url: string): any => {
+    return axios.get(url).then(({ data }) => {
+        return data;
+    })
+};
