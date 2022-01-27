@@ -1,2 +1,2 @@
-export { CharacterInfo as CharacterInfoStore } from "./model"
+export { characterInfoStore } from "./model"
 export { Character } from "./ui"
