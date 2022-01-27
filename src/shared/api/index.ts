@@ -1,2 +1,2 @@
-export { fetchData } from './request';
-export { HTTP_METHODS } from './config';
+export { fetchData } from './functions';
+export { HTTP_METHODS, API_URL } from './constants';

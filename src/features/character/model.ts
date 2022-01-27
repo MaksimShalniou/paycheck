@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import { fetchCharacterInfo } from './api';
+import { fetchCharacterInfo } from './';
 import { CharacterInfoParams, InfoParams } from './types';
 
 class CharacterInfo implements CharacterInfoParams {

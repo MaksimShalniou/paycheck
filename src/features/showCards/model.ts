@@ -1,6 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import { fetchCards } from './api';
-import { CardParams, ShowCardsParams } from './';
+import { CardParams, ShowCardsParams, fetchCards } from './';
 
 export class CardsStore implements ShowCardsParams {
   cards: Array<CardParams> = [];

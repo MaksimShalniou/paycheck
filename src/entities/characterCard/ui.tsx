@@ -1,7 +1,7 @@
 import React from "react";
 import { observer } from "mobx-react";
 import { Typography  } from '@material-ui/core';
-import { useStyles } from "./styles";
+import { useStyles } from "./";
 import { characterInfoStore } from "../../features/character";
 
 export const CharacterCard = (observer(() => {

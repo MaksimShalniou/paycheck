@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles({
   container: {
     height: 415,
     display: 'flex',
@@ -32,4 +32,4 @@ export const useStyles = makeStyles((theme) => ({
     flex: '3 1 0%',
     padding: '0.75rem',
   },
-}))
+})

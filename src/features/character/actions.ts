@@ -1,5 +1,5 @@
 import { fetchData, HTTP_METHODS } from '../../shared/api';
-import { API_URL } from '../../shared/api/config';
+import { API_URL } from '../../shared/api';
 import { InfoParams } from './types';
 
 export const fetchCharacterInfo = (

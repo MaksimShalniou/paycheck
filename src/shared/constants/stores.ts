@@ -1,1 +1,0 @@
-export const CHARACTER_INFO_STORE = "characterInfoStore"
