@@ -6,3 +6,5 @@ export const HTTP_METHODS = {
     DELETE: 'DELETE',
     //...
 }
+
+export const API_URL = "https://rickandmortyapi.com/api/character"
