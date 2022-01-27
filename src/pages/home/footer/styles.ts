@@ -1,9 +1,8 @@
-import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 const HEIGHT_OF_FOOTER_BLOCK = 50;
 
-const useStyles = makeStyles({
+export const useStyles = makeStyles({
     footer: {
         height: HEIGHT_OF_FOOTER_BLOCK,
         boxShadow: '0px 0px 12px #8997AA',
@@ -13,9 +12,3 @@ const useStyles = makeStyles({
         width: '100%',
     }
 });
-
-export const Footer = () => {
-    const classes = useStyles();
-
-    return <footer className={classes.footer}>Footer</footer>
-}
