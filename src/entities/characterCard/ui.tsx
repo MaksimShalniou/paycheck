@@ -1,10 +1,10 @@
 import React from "react";
-import { inject, observer } from "mobx-react";
+import { observer } from "mobx-react";
 import { Typography  } from '@material-ui/core';
-import { CHARACTER_INFO_STORE } from "../../shared/constants/stores";
 import { useStyles } from "./styles";
+import { characterInfoStore } from "../../features/character";
 
-export const CharacterCard = inject(CHARACTER_INFO_STORE)(observer(({characterInfoStore}: any) => {
+export const CharacterCard = (observer(() => {
   const classes = useStyles();
 
   return (

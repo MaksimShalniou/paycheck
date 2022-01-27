@@ -2,8 +2,8 @@ import { makeAutoObservable } from 'mobx';
 import { fetchCharacterInfo } from './api';
 import { CharacterInfoParams, InfoParams } from './types';
 
-export class CharacterInfo implements CharacterInfoParams {
-  info = {};
+class CharacterInfo implements CharacterInfoParams {
+  info: any;
 
   addInfo = (info: InfoParams) => {
     this.info = info;
@@ -15,3 +15,5 @@ export class CharacterInfo implements CharacterInfoParams {
     makeAutoObservable(this);
   }
 }
+
+export const characterInfoStore = new CharacterInfo()
