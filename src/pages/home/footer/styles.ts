@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { HEIGHT_OF_FOOTER_BLOCK } from './';
+import { HEIGHT_OF_FOOTER_BLOCK } from '.';
 
 export const useStyles = makeStyles({
     footer: {
