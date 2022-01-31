@@ -7,11 +7,7 @@ export const Header = () => {
 
     return (
         <header className={classes.header}>
-            <HashLink 
-                smooth 
-                to={'/#page-1'}
-                scroll={(el) => el.scrollTop = 70}
-            >
+            <HashLink smooth to={'/#page-1'}>
                 Page 1
             </HashLink>
             <HashLink smooth to={'/#page-2'}>

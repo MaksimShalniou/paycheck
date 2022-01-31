@@ -5,5 +5,6 @@ export const useStyles = makeStyles({
         background: 'gray',
         minHeight: '100vh',
         minWidth: '100vw',
+        scrollMarginTop: '70px',
     }
 });
