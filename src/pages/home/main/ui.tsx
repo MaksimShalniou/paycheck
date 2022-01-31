@@ -1,11 +1,10 @@
 import React from 'react';
-import { ShowCards } from '../../../features/showCards';
 import { useStyles } from './'
 
-export const Main = () => {
+export const Main = ({ id }: any) => {
     const classes = useStyles();
 
-    return <main className={classes.main}>
-            <ShowCards />
+    return <main id={id} className={classes.main}>
+            Page 1
     </main>
 }

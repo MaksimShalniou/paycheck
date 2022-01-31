@@ -9,7 +9,10 @@ export const HomePage = () => {
 
     return <div className={classes.page}>
         <Header />
-        <Main />
+        <Main id='link-one'/>
+        <div style={{height: '100vh'}}id='link-two'>
+            Page 2
+        </div>
         <Footer />
     </div>
 }
