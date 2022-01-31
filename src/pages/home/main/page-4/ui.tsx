@@ -1,10 +1,15 @@
 import React, { ReactElement } from "react";
-import { useStyles } from "./";
+import { PropTypes } from ".";
+import { BasePage } from "../../../../shared/basePage";
 
-export const Page4 = ({ id }: any): ReactElement => {
-  const classes = useStyles();
-
+export const Page4 = ({ id }: PropTypes): ReactElement => {
   return (
-    <div id={id} className={classes.wrapper}>Page-4</div>
+    <BasePage
+      id={id}
+      title="Page-4"
+      backgroundColor="green"
+    >
+      <div>sdfsdfs</div>
+    </BasePage>
   )
 }
