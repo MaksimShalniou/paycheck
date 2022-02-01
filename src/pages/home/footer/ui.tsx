@@ -1,8 +1,8 @@
-import React from 'react';
-import { useStyles } from '.';
+import React from "react";
+import { useStyles } from ".";
 
 export const Footer = () => {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return <footer className={classes.footer}>Footer</footer>
-}
+  return <footer className={classes.footer}>Footer</footer>;
+};

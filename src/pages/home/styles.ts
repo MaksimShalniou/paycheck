@@ -1,8 +1,8 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles({
-    page: {
-        minHeight: '100vh',
-        position: 'relative',
-    }
+  page: {
+    minHeight: "100vh",
+    position: "relative",
+  },
 });

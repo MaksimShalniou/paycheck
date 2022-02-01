@@ -1,2 +1,2 @@
 export { Page7 } from "./ui";
-export type { PropTypes } from "./types"
+export type { PropTypes } from "./types";

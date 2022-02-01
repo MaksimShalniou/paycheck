@@ -1,2 +1,2 @@
-export { useStyles } from './styles';
-export { Header } from './ui'
+export { useStyles } from "./styles";
+export { Header } from "./ui";

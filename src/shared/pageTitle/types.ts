@@ -1,3 +1,3 @@
 export interface PropTypes {
-  value: string
+  value: string;
 }
