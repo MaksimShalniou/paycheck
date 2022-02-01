@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStyles } from './';
-import { HashLinks, HashLink } from '../../../shared/hashLinks'
+import { HashLinks, HashLink } from '@/shared/hashLinks'
 
 export const Header = () => {
     const classes = useStyles();

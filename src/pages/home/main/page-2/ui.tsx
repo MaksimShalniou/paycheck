@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { PropTypes } from ".";
-import { BasePage } from "../../../../shared/basePage";
+import { BasePage } from "@/shared/basePage";
 
 export const Page2 = ({ id }: PropTypes): ReactElement => {
   return (

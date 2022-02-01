@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { ThemeProvider } from '@material-ui/styles';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Routes } from '../pages';
+import { Routes } from '@/pages';
 import { getCustomTheme } from './theme';
 
 ReactDOM.render(

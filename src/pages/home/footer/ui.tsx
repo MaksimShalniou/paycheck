@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStyles } from './';
+import { useStyles } from '.';
 
 export const Footer = () => {
     const classes = useStyles();

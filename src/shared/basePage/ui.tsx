@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { PropTypes, useStyles } from ".";
-import { PageTitle } from "../pageTitle";
+import { PageTitle } from "@/shared/pageTitle";
 
 export const BasePage = ({ id, title, backgroundColor, children }: PropTypes): ReactElement => {
   const classes = useStyles({backgroundColor});
