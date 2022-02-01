@@ -1,11 +1,9 @@
 import React, { ReactElement } from "react";
-import { PropTypes } from "./";
-import { useStyles } from "./";
+import { PropTypes } from ".";
+import { useStyles } from ".";
 
 export const PageTitle = ({ value }: PropTypes): ReactElement => {
-  const classes = useStyles()
+  const classes = useStyles();
 
-  return (
-    <h2 className={classes.title}>{value}</h2>
-  )
-}
+  return <h2 className={classes.title}>{value}</h2>;
+};

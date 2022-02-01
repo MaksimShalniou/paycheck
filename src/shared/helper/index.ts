@@ -1,1 +1,1 @@
-export { HomePageNamesAndHashes } from './constants';
+export { HomePageNamesAndHashes } from "./constants";

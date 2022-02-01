@@ -1,16 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { ThemeProvider } from '@material-ui/styles';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import { Routes } from '../pages';
-import { getCustomTheme } from './theme';
+import React from "react";
+import ReactDOM from "react-dom";
+import { ThemeProvider } from "@material-ui/styles";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { Routes } from "@/pages";
+import { getCustomTheme } from "./theme";
 
 ReactDOM.render(
   <ThemeProvider theme={getCustomTheme()}>
     <Routes />
-    </ThemeProvider>,
-  document.getElementById('root')
+  </ThemeProvider>,
+  document.getElementById("root"),
 );
 
 // If you want to start measuring performance in your app, pass a function
