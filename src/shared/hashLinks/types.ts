@@ -1,9 +1,9 @@
 
-export interface HashLink {
+export interface IHashLink {
     path: string,
     title: string,
 }
 
-export interface HashLinksConfig {
-    config: HashLink[],
+export interface IHashLinksConfig {
+    config: IHashLink[],
 }

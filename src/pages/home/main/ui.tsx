@@ -1,15 +1,16 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, lazy } from 'react';
 import { useStyles } from './'
-import { Page1 } from './page-1';
-import { Page2 } from './page-2';
-import { Page3 } from './page-3';
-import { Page4 } from './page-4';
-import { Page5 } from './page-5';
-import { Page6 } from './page-6';
-import { Page7 } from './page-7';
+import { withSuspense } from '../../../shared/hocs';
 
 export const Main = (): ReactElement => {
     const classes = useStyles();
+    const Page1 = withSuspense(lazy(() => import('./page-1')));
+    const Page2 = withSuspense(lazy(() => import('./page-2')));
+    const Page3 = withSuspense(lazy(() => import('./page-3')));
+    const Page4 = withSuspense(lazy(() => import('./page-4')));
+    const Page5 = withSuspense(lazy(() => import('./page-5')));
+    const Page6 = withSuspense(lazy(() => import('./page-6')));
+    const Page7 = withSuspense(lazy(() => import('./page-7')));
 
     return (
         <main className={classes.main}>

@@ -1,2 +1,2 @@
-export type { HashLinksConfig, HashLink } from './types';
+export type { IHashLinksConfig, IHashLink } from './types';
 export { HashLinks } from './ui';

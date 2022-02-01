@@ -1,7 +1,7 @@
 import React, { FC, Fragment } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import { HashLinksConfig } from './';
+import { IHashLinksConfig } from './';
 
-export const HashLinks: FC<HashLinksConfig> = ({ config }) => <Fragment>
+export const HashLinks: FC<IHashLinksConfig> = ({ config }) => <Fragment>
     {config.map((value) => <HashLink smooth to={value.path}>{value.title}</HashLink>)}
 </Fragment>
