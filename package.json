@@ -30,8 +30,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "lint": "eslint . --ext .ts,.tsx",
-    "lint-fix": "eslint . --ext .ts,.tsx --fix"
+    "lint": "eslint . --ext ts,.tsx,.js,.jsx",
+    "lint-fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
   },
   "pre-commit": [
     "lint-fix"
