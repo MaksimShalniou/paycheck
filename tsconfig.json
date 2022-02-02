@@ -2,7 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "crypto": [
+        "node_modules/crypto-js"
+      ]
     },
     "experimentalDecorators": true,
     "target": "es5",
