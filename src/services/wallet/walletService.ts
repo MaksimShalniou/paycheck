@@ -1,4 +1,4 @@
-import jazzicon from '@metamask/jazzicon';
+import { makeAutoObservable } from 'mobx';
 
 interface IWallet {
   checkIfMetamaskInstalled: any;
@@ -7,10 +7,8 @@ interface IWallet {
   checkIfAccountIsConnected: any;
   sendCoin: any;
   connect: any;
-  getAvatarFromMetamask: any;
-  wallet: any;
+  account: any;
 }
-
 export class WalletService {
   wallet: IWallet;
   constructor(wallet: IWallet) {
@@ -36,20 +34,21 @@ export class WalletService {
   sendCoin() {
     this.wallet.sendCoin();
   }
-  getAvatarFromMetamask() {
-    this.wallet.getAvatarFromMetamask();
-  }
 }
 
 export class MetamaskWallet implements IWallet {
+  constructor() {
+    makeAutoObservable(this);
+  }
   wallet: any;
+  account: any;
   async connect() {
     const { ethereum } = window;
     console.log("start connecting");
     const accounts = await ethereum.request({ method: "eth_requestAccounts" });
     console.log("account connected");
-    const account = accounts[0];
-    alert(`Account info: ${account}`);
+    this.account = accounts[0];
+    alert(`Account info: ${this.account}`);
   }
 
   checkIfMetamaskInstalled = () => {
@@ -65,9 +64,8 @@ export class MetamaskWallet implements IWallet {
   };
 
   checkIfAccountIsConnected = () => {
-    alert(
-      `Account is ${!!window.ethereum.selectedAddress ? "" : "not"} connected`
-    );
+    console.log('asdasdasdas6666', window.ethereum.selectedAddress)
+    this.account = window.ethereum.selectedAddress;
   };
 
   sendCoin = async () => {
@@ -91,13 +89,6 @@ export class MetamaskWallet implements IWallet {
       .then((txHash: any) => console.log(txHash))
       .catch((error: any) => console.error);
   };
-
-  getAvatarFromMetamask({ account }: any) {
-      if (account) {
-        const addr = account.slice(2, 10);
-        const seed = parseInt(addr, 16);
-        const icon = jazzicon(40, seed);
-        console.log('asdasdasd', icon)
-      }
-  }
 }
+
+export default new MetamaskWallet();
