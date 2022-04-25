@@ -1,0 +1,4 @@
+build/*
+public/*
+src/app/react-app-env.d.ts
+config-overrides.js
