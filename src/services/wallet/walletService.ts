@@ -1,4 +1,5 @@
 import { makeAutoObservable } from 'mobx';
+import { ethers } from 'ethers';
 
 interface IWallet {
   checkIfMetamaskInstalled: any;
@@ -89,6 +90,18 @@ export class MetamaskWallet implements IWallet {
       .then((txHash: any) => console.log(txHash))
       .catch((error: any) => console.error);
   };
+
+  sign = async () => {
+    try {
+      const provider = new ethers.providers.Web3Provider(window.ethereum)
+      const signer = provider.getSigner()
+      const signature = await signer.signMessage("message")
+      const address = await signer.getAddress()
+
+      console.log('signSuccess: ', signature, address);
+      
+    } catch (error) { console.log(222, error) }
+  }
 }
 
 export default new MetamaskWallet();

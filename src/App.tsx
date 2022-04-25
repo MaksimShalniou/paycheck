@@ -52,6 +52,7 @@ export const App = observer(() => {
       </button>
       <button onClick={() => MetamaskWallet.connect()}>Connect</button>
       <button onClick={() => MetamaskWallet.sendCoin()}>Send coin</button>
+      <button onClick={() => MetamaskWallet.sign()}>Sign</button>
     </>
   );
 });
